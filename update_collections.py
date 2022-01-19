@@ -14,6 +14,8 @@ print("Processing {} Videos".format(len(videos)))
 
 counter: int = 0
 
+# Reference: https://pastebin.com/vYQSHJzD
+
 for video in videos:
     counter += 1
     for part in video.iterParts():
@@ -22,7 +24,6 @@ for video in videos:
 
         print("{} - Assigning video '{}' to collection '{}'".format(counter, part.file, base_folder))
 
-        #if part.file[0:len(PATH_FOLDER)] == PATH_FOLDER:
         hasCollection = False
         for tag in video.collections:
             if tag.tag == base_folder:
